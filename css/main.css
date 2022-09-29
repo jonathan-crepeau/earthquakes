@@ -15,12 +15,16 @@ body {
 
 #map-container {
     background: lightblue;
-    flex: 1;
+    flex: 3;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #info-container {
     background: palegoldenrod;
-    flex: 1;
+    flex: 2;
     padding: 5% 0 0 5%;
     text-transform: uppercase;
 }
