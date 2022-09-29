@@ -21,4 +21,6 @@ body {
 #info-container {
     background: palegoldenrod;
     flex: 1;
+    padding: 5% 0 0 5%;
+    text-transform: uppercase;
 }

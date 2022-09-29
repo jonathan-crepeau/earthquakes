@@ -1,9 +1,10 @@
 // console.log('Its that pink venom.')
 
 class UI {
+    static earthquakes = []
     static async makeCall() {
         try {
-            const response = await $.ajax({
+            await $.ajax({
             method: 'GET',
             url: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson',
             success: function(response){
@@ -17,8 +18,9 @@ class UI {
     }
     static filterEarthquakes(obj) {
         let earthquakes = obj.features;
-        for (const earthquake of earthquakes) {
-            console.log(earthquake);
+        earthquakes.sort((a, b) => b.properties.mag - a.properties.mag);
+        for (let i = 0; i < earthquakes.length; i++) {
+            $('#info-container').append(`<p>${earthquakes[i].properties.title}</p>`);
         }
     }
 }
