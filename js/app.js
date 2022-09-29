@@ -1,1 +1,3 @@
-console.log('Fear is the mind killer.');
+
+
+$(document).ready(UI.makeCall());

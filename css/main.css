@@ -1,1 +1,24 @@
-body { background: peru; }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+#earthquakes-display {
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#map-container {
+    background: lightblue;
+    flex: 1;
+}
+
+#info-container {
+    background: palegoldenrod;
+    flex: 1;
+}
